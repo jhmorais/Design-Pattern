@@ -1,0 +1,2 @@
+# Adapter
+Funciona como um adaptador entre uma classe e outra, ou um projeto e uma api. Permite a comunicação entre classes que não poderiam trabalhar juntas devido à incompatibilidade de suas interfaces.
