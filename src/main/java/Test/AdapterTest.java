@@ -6,6 +6,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import Adapter.Adapter;
+import Adapter.ElectricCar;
+import Adapter.OldCar;
+import Adapter.RaceCar;
+import Adapter.SportCar;
 
 public class AdapterTest {
 	
@@ -18,29 +22,29 @@ public class AdapterTest {
 	
 	@Test
 	public void testOldCar() {
-		assertEquals("Old car is running...", adapter.accelerate("Old"));
-		assertEquals("Old car is stopping...", adapter.brake("Old"));
-		assertEquals("Old car is turning...", adapter.handling("Old"));
+		assertEquals("Old car is running...", adapter.accelerate(new OldCar()));
+		assertEquals("Old car is stopping...", adapter.brake(new OldCar()));
+		assertEquals("Old car is turning...", adapter.handling(new OldCar()));
 	}
 	
 	@Test
 	public void testRaceCar() {
-		assertEquals("Race car is running...", adapter.accelerate("Race"));
-		assertEquals("Race car is stopping...", adapter.brake("Race"));
-		assertEquals("Race car is turning...", adapter.handling("Race"));
+		assertEquals("Race car is running...", adapter.accelerate(new RaceCar()));
+		assertEquals("Race car is stopping...", adapter.brake(new RaceCar()));
+		assertEquals("Race car is turning...", adapter.handling(new RaceCar()));
 	}
 	
 	@Test
 	public void testSportCar() {
-		assertEquals("Sport car is running...", adapter.accelerate("Sport"));
-		assertEquals("Sport car is stopping...", adapter.brake("Sport"));
-		assertEquals("Sport car is turning...", adapter.handling("Sport"));
+		assertEquals("Sport car is running...", adapter.accelerate(new SportCar()));
+		assertEquals("Sport car is stopping...", adapter.brake(new SportCar()));
+		assertEquals("Sport car is turning...", adapter.handling(new SportCar()));
 	}
 	
 	@Test
 	public void testElectricCar() {
-		assertEquals("Electric car is running...", adapter.accelerate("Electric"));
-		assertEquals("Electric car is stopping...", adapter.brake("Electric"));
-		assertEquals("Electric car is turning...", adapter.handling("Electric"));
+		assertEquals("Electric car is running...", adapter.accelerate(new ElectricCar()));
+		assertEquals("Electric car is stopping...", adapter.brake(new ElectricCar()));
+		assertEquals("Electric car is turning...", adapter.handling(new ElectricCar()));
 	}
 }

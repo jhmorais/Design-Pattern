@@ -2,9 +2,9 @@ package Adapter;
 
 public interface Car {
 	
-	public String accelerate(String type);
+	public String accelerate();
 	
-	public String brake(String type);
+	public String brake();
 	
-	public String handling(String type);
+	public String handling();
 }
